@@ -1,5 +1,33 @@
-.idea/
-.gradle/
-build/
-gradle
-settings.gradle
+
+# windows
+Thumbs.db
+
+# osx
+.DS_store
+.AppleDouble
+.LSOverride
+
+# gradle
+/.gradle
+/build
+
+# eclipse
+/.settings
+/.metadata
+/.classpath
+/.project
+/eclipse
+/bin
+
+# intellij
+/.idea
+/out
+/*.ipr
+/*.iws
+/*.iml
+
+# bin
+*.exe
+*.jar
+*.out
+!/gradle/wrapper/gradle-wrapper.jar
