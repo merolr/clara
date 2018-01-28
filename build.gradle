@@ -1,5 +1,5 @@
 group 'net.scottnotfound'
-version '0.0.0-SNAPSHOT'
+version '0.0.001-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
