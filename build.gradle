@@ -1,4 +1,4 @@
-group 'scottnotfound'
+group 'net.scottnotfound'
 version '0.0.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -22,4 +22,32 @@ dependencies {
 
     compile 'org.apache.chemistry.opencmis:chemistry-opencmis-commons-impl:1.1.0'
 
+}
+
+
+jar {
+    manifest {
+        attributes 'Bundle-License': 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+        attributes 'Bundle-Name': 'Clara'
+        attributes 'Main-Class': 'net.scottnotfound.clara.Clara'
+        attributes 'Bundle-Version': version
+    }
+}
+
+
+task("fatJar") {
+    jar {
+        from {
+            configurations.compile.collect {
+                it.isDirectory() ? it : zipTree(it)
+            }
+        }
+        manifest {
+            attributes 'Bundle-License': 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+            attributes 'Bundle-Name': 'Clara'
+            attributes 'Main-Class': 'net.scottnotfound.clara.Clara'
+            attributes 'Bundle-Version': version
+        }
+    }
+    dependsOn 'jar'
 }
