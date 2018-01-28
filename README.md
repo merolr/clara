@@ -16,6 +16,6 @@ are installed
     3. Set the root directory to the cloned repository and click `Finish`
 - For IntelliJ:
     1. Start up IntelliJ
-    2. Go to `File` > `New` > `Project from Existing Sources`
+    2. Go to `File` > `New` > `Project from Existing Sources...`
     3. Navigate to the directory of the cloned repository and select `build.gradle` and click `OK`
     4. Click `OK` again
